@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  scroll-padding: 8vh;
+  scroll-behavior: smooth;
+}
+
+/* header */
+.header-container{
+  width: 100%;
+  min-height: 8vh;
+  color: antiquewhite;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+}
+
+.header-box1{
+  width: 50vw;
+  min-height: 8vh;
+  padding-left: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header-box2{
+  width: 50vw;
+  min-height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-list{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.header-list li{
+  display: flex;
+}
+
+.header-list > li > a{
+  text-decoration: none;
+  color: antiquewhite;
+  font-size: 25px;
+  border-radius: 20px;
+}
+
+
+.header-list>li>a::before {
+  display: block;
+  content: '';
+  border: solid 1px antiquewhite;
+  transform: scale(0);
+  transition: transform ease-in-out 300ms;
+  transform-origin: left;
+}
+
+.header-list>li>a:hover::before {
+  transform: scale(1);
+  transform-origin: right;
+}
+
+.header-list > li > a::after{
+  display: block;
+  content: '';
+  border: solid 1px #faebd7;
+  transform: scale(0);
+  transition: transform ease-in-out 300ms;
+  transform-origin: right;
+}
+
+.header-list > li > a:hover::after{
+  transform: scale(1);
+  transform-origin: left;
+}
+
+/* main */
+.main-container{
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;  
+}
+
+.home-page{
+  width: 100%;
+  min-height: 92vh;
+  color: white;
+  background-color: #111;
+  background-image: url(pictures/bg1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: row;
+}
+
+.home-box1 {
+  height: 92vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-box2 {
+  height: 92vh;
+  width: 100%;
+  
+}
+
+.home-inner-box1 {
+  /* border: white solid 1px; */
+  border-radius: 20px;
+  /* box-shadow:-2px 2px 2px rgba(255, 255, 255, 0.8); */
+  /* background: transparent;
+  backdrop-filter: blur(10px); */
+  height: 30rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-inner-box1 > h1 {
+  font-size: 60px;
+}
+
+.home-inner-box1 > h4 {
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+
+.home-inner-box2{
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.home-inner-box2 > a > img{
+  height: 50px;
+  width: 50px;
+}
+
+.home-inner-box2 > a > img:hover{
+  cursor: pointer;
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  10% {
+    transform: rotate(15deg);
+  }
+
+  20% {
+    transform: rotate(-15deg);
+  }
+
+  30% {
+    transform: rotate(15deg);
+  }
+
+  40% {
+    transform: rotate(-15deg);
+  }
+}
+
+.about-page{
+  width: 100%;
+  min-height: 92vh;
+  color: white;
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-page > p {
+  padding: 1rem 30rem;
+}
+
+.about-box1{
+  width: 100%;
+  height: 100%;
+  padding: 3rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-box2{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 1;
+  gap: 10px;
+  padding: 3rem 20rem;
+}
+
+.about-box2 > p {
+  padding-bottom: 1.5rem;
+}
+
+.about-dropbox1, .about-dropbox2, .about-dropbox3{
+  background-color: #2a292f;;
+  padding: 1rem;
+  text-align: center;
+  height: 4.3rem;
+  width: 20rem;
+  transition: height ease 1s;
+  overflow: hidden;
+}
+
+.inner-dropbox1 > img, .inner-dropbox2 > img, .inner-dropbox3 > img {
+  height: 50px;
+  width: 50px;
+}
+
+.inner-dropbox1, .inner-dropbox2, .inner-dropbox3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10px;
+  gap: 20px;
+}
+
+.about-box2 > div > ul > li{
+  list-style-type: none;
+}
+
+.about-box2 > div > ul {
+  padding-top: 3rem;
+  line-height: 1.5rem;
+}
+
+.about-dropbox1:hover{
+  height:14rem;
+}
+
+.about-dropbox2:hover{
+  height: 17rem;
+}
+
+.about-dropbox3:hover{
+  height: 11rem;
+}
+
+.material-icons.far {
+  font-size: 2rem;
+}
+
+.about-dropbox1:hover .material-icons.far {
+  color: red;
+  transition: color ease-in-out 0.5s;
+}
+
+.about-dropbox1:not(:hover) .material-icons.far {
+  color: white;
+  transition: color ease-in-out 0.5s;
+}
+
+.icon1 {
+  height: 50px;
+  width: 50px;
+  background-image: url(pictures/skills.png);
+  background-size: cover;
+}
+
+.about-dropbox1:hover .icon1 {
+  background-image: url(pictures/star.png);
+  transition: background-image ease-in-out 0.5s;
+}
+
+.about-dropbox1:not(:hover) .icon1 {
+  background-image: url(pictures/skills.png);
+  transition: background-image ease-in-out 0.5s;
+}
+
+.icon2 {
+  height: 50px;
+  width: 50px;
+  background-image: url(pictures/education.png);
+  background-size: cover;
+}
+
+.about-dropbox2:hover .icon2 {
+  background-image: url(pictures/star.png);
+  transition: background-image ease-in-out 0.25s;
+}
+
+.about-dropbox2:not(:hover) .icon2 {
+  background-image: url(pictures/education.png);
+  transition: background-image ease-in-out 0.5s;
+}
+
+.icon3 {
+  height: 50px;
+  width: 50px;
+  background-image: url(pictures/experience.png);
+  background-size: cover;
+}
+
+.about-dropbox3:hover .icon3{
+  background-image: url(pictures/experience3.png);
+  transition: background-image ease-in 0.5s;
+}
+
+.about-dropbox3:not(:hover) .icon3 {
+  background-image: url(pictures/experience.png);
+  transition: background-image ease-out 0.5s;
+}
+
+.project-page{
+  width: 100%;
+  min-height: 92vh;
+  padding-top: 3rem;
+  color: white;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contact-page{
+  width: 100%;  
+  min-height: 92vh;
+  padding-top: 3rem;
+  color: white;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+/* main */
+
+/* footer */
+.footer-container{
+  width: 100%;
+  min-height: 8vh;
+  display: flex;
+  justify-content: center;
+}
