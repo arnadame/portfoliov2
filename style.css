@@ -21,7 +21,7 @@
   top: 0;
 }
 
-.header-box1{
+.header-wrapper1{
   width: 50vw;
   min-height: 8vh;
   padding-left: 2rem;
@@ -30,7 +30,7 @@
   align-items: center;
 }
 
-.header-box2{
+.header-wrapper2{
   width: 50vw;
   min-height: 8vh;
   display: flex;
@@ -57,7 +57,7 @@
 }
 
 
-.header-list>li>a::before {
+/* .header-list>li>a::before {
   display: block;
   content: '';
   border: solid 1px antiquewhite;
@@ -83,7 +83,7 @@
 .header-list > li > a:hover::after{
   transform: scale(1);
   transform-origin: left;
-}
+} */
 
 /* main */
 .main-container{
@@ -107,7 +107,7 @@
   flex-direction: row;
 }
 
-.home-box1 {
+.home-wrapper1 {
   height: 92vh;
   width: 100%;
   display: flex;
@@ -116,7 +116,7 @@
   align-items: center;
 }
 
-.home-box2 {
+.home-wrapper2 {
   height: 92vh;
   width: 100%;
   
@@ -195,7 +195,7 @@
   padding: 1rem 30rem;
 }
 
-.about-box1{
+.about-wrapper1{
   width: 100%;
   height: 100%;
   padding: 3rem 1rem 1rem;
@@ -204,7 +204,7 @@
   align-items: center;
 }
 
-.about-box2{
+.about-wrapper2{
   width: 100%;
   height: 100%;
   display: flex;
@@ -215,7 +215,7 @@
   padding: 3rem 20rem;
 }
 
-.about-box2 > p {
+.about-wrapper2 > p {
   padding-bottom: 1.5rem;
 }
 
@@ -242,11 +242,11 @@
   gap: 20px;
 }
 
-.about-box2 > div > ul > li{
+.about-wrapper2 > div > ul > li{
   list-style-type: none;
 }
 
-.about-box2 > div > ul {
+.about-wrapper2 > div > ul {
   padding-top: 3rem;
   line-height: 1.5rem;
 }
@@ -263,18 +263,38 @@
   height: 11rem;
 }
 
-.material-icons.far {
+.far, .fas{
   font-size: 2rem;
 }
 
-.about-dropbox1:hover .material-icons.far {
-  color: red;
-  transition: color ease-in-out 0.5s;
+.about-dropbox1:hover .fa-keyboard {
+  color: #DE163A;
+  transition: color ease-in-out 1s;
 }
 
-.about-dropbox1:not(:hover) .material-icons.far {
+.about-dropbox1:not(:hover) .fa-keyboard {
   color: white;
-  transition: color ease-in-out 0.5s;
+  transition: color ease-in-out 1s;
+}
+
+.about-dropbox2:hover .fa-graduation-cap {
+  color: #DE163A;
+  transition: color ease-in-out 1s;
+}
+
+.about-dropbox2:not(:hover) .fa-graduation-cap {
+  color: white;
+  transition: color ease-in-out 1s;
+}
+
+.about-dropbox3:hover .fa-briefcase {
+  color: #DE163A;
+  transition: color ease-in-out 1s;
+}
+
+.about-dropbox3:not(:hover) .fa-briefcase {
+  color: white;
+  transition: color ease-in-out 1s;
 }
 
 .icon1 {
@@ -303,12 +323,12 @@
 
 .about-dropbox2:hover .icon2 {
   background-image: url(pictures/star.png);
-  transition: background-image ease-in-out 0.25s;
+  transition: background-image ease-in-out 1s;
 }
 
 .about-dropbox2:not(:hover) .icon2 {
   background-image: url(pictures/education.png);
-  transition: background-image ease-in-out 0.5s;
+  transition: background-image ease-in-out 1s;
 }
 
 .icon3 {
@@ -320,12 +340,12 @@
 
 .about-dropbox3:hover .icon3{
   background-image: url(pictures/experience3.png);
-  transition: background-image ease-in 0.5s;
+  transition: background-image ease-in 1s;
 }
 
 .about-dropbox3:not(:hover) .icon3 {
   background-image: url(pictures/experience.png);
-  transition: background-image ease-out 0.5s;
+  transition: background-image ease-out 1s;
 }
 
 .project-page{
@@ -334,12 +354,93 @@
   padding-top: 3rem;
   color: white;
   background-color: #111;
+  /* background-image: url(pictures/bg1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; */
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
-.contact-page{
+.project-wrapper1{
+  width: 100%;
+  padding: 3rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-wrapper2{
+  width: 100%;
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .project-inner-wrapper2{
+  width: 40rem;
+  height: 20rem;
+  position: relative;
+  overflow: hidden;
+  gap: 20px;
+} */
+
+.project-inner-wrapper1{
+  width: 100rem;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-box{
+  border-radius: 2rem 2rem;
+  width: 12rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.b-rad {
+  border-radius: 2rem 2rem 0 0;
+  background-image: url(pictures/bg1.jpg);
+  background-size: cover;
+}
+
+.b-rad2{
+  border-radius: 0 0 2rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.project-inner-box1{
+  height: 100%;
+  width: 100%;
+  border: solid 2px #2a292f;
+}
+
+.fa-angle-left {
+  cursor: pointer;
+  position: absolute;
+  left: 25rem;
+  z-index: 1;
+}
+
+.fa-angle-right {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  right: 25rem;
+}
+
+/* .contact-page{
   width: 100%;  
   min-height: 92vh;
   padding-top: 3rem;
@@ -348,7 +449,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-}
+} */
 /* main */
 
 /* footer */
